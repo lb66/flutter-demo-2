@@ -24,24 +24,34 @@ class MyApp extends StatelessWidget {
             //     decorationStyle: TextDecorationStyle.solid,
             //   ),
             // ),
+            // child: Container(
+            //   child: new Text(
+            //     'Hello World',
+            //     style: TextStyle(fontSize: 40.0),
+            //   ),
+            //   alignment: Alignment.topLeft,
+            //   width: 500.0,
+            //   height: 400.0,
+            //   // color: Colors.lightBlue,
+            //   padding: const EdgeInsets.fromLTRB(10.0, 30.0, 0.0, 0.0),
+            //   margin: const EdgeInsets.all(10.0),
+            //   decoration: new BoxDecoration(
+            //       gradient: const LinearGradient(colors: [
+            //         Colors.lightBlue,
+            //         Colors.greenAccent,
+            //         Colors.purple
+            //       ]),
+            //       border: Border.all(width: 2.0, color: Colors.red)),
+            // ),
             child: Container(
-              child: new Text(
-                'Hello World',
-                style: TextStyle(fontSize: 40.0),
+              child: new Image.network(
+                'https://gw.alipayobjects.com/mdn/prod_resou/afts/img/A*OwZWQ68zSTMAAAAAAAAAAABkARQnAQ',
+                scale: 1.0,
+                repeat: ImageRepeat.repeat ,
+                fit: BoxFit.fitWidth,
               ),
-              alignment: Alignment.topLeft,
-              width: 500.0,
-              height: 400.0,
-              // color: Colors.lightBlue,
-              padding: const EdgeInsets.fromLTRB(10.0, 30.0, 0.0, 0.0),
-              margin: const EdgeInsets.all(10.0),
-              decoration: new BoxDecoration(
-                  gradient: const LinearGradient(colors: [
-                    Colors.lightBlue,
-                    Colors.greenAccent,
-                    Colors.purple
-                  ]),
-                  border: Border.all(width: 2.0, color: Colors.red)),
+              width: 300.0,
+              height: 200.0,
             ),
           ),
         ));

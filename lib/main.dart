@@ -1,25 +1,46 @@
 import 'package:flutter/material.dart';
 
+// void main() {
+//   runApp(MyApp(xxx: new List<String>.generate(10, (i) => "Item $i")));
+// }
 void main() {
-  runApp(MyApp(xxx: new List<String>.generate(10, (i) => "Item $i")));
+  runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
-  final List<String> xxx;
-  MyApp({Key key, @required this.xxx}) : super(key: key);
+  // final List<String> xxx;
+  // MyApp({Key key, @required this.xxx}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'welcome',
         home: Scaffold(
             appBar: AppBar(title: new Text('welcome')),
-            body: new ListView.builder(
-                itemCount: xxx.length,
-                itemBuilder: (context, index) {
-                  return new ListTile(
-                    title: new Text('${xxx[index]}'),
-                  );
-                })
+            body:GridView(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+              mainAxisSpacing: 2.0,
+              crossAxisSpacing: 2.0,
+              childAspectRatio: 0.7
+            ),
+            children: <Widget>[
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+             new Image.asset('images/b.png',fit: BoxFit.cover),
+            ],
+          )
+            // body: new ListView.builder(
+            //     itemCount: xxx.length,
+            //     itemBuilder: (context, index) {
+            //       return new ListTile(
+            //         title: new Text('${xxx[index]}'),
+            //       );
+            //     })
 
             // body:Center(
             // child:Container(

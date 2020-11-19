@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   // final List<String> xxx;
   // MyApp({Key key, @required this.xxx}) : super(key: key);
@@ -15,25 +16,44 @@ class MyApp extends StatelessWidget {
         title: 'welcome',
         home: Scaffold(
             appBar: AppBar(title: new Text('welcome')),
-            body:GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-              mainAxisSpacing: 2.0,
-              crossAxisSpacing: 2.0,
-              childAspectRatio: 0.7
-            ),
-            children: <Widget>[
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-             new Image.asset('images/b.png',fit: BoxFit.cover),
-            ],
-          )
+            body: new Row(
+              children: <Widget>[
+                new RaisedButton(
+                    onPressed: () {},
+                    color: Colors.redAccent,
+                    child: new Text('红色按钮')),
+                Expanded(
+                    child: new RaisedButton(
+                  onPressed: () {},
+                  color: Colors.orangeAccent,
+                  child: new Text('黄色按钮'),
+                )),
+                new RaisedButton(
+                    onPressed: () {},
+                    color: Colors.pinkAccent,
+                    child: new Text('粉色按钮'))
+              ],
+            )
+            //   body:GridView(
+            //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            //   crossAxisCount: 3,
+            //     mainAxisSpacing: 2.0,
+            //     crossAxisSpacing: 2.0,
+            //     childAspectRatio: 1.0
+            //   ),
+            //   children: <Widget>[
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //    new Image.asset('images/b.png',fit: BoxFit.cover),
+            //   ],
+            // )
+
             // body: new ListView.builder(
             //     itemCount: xxx.length,
             //     itemBuilder: (context, index) {
